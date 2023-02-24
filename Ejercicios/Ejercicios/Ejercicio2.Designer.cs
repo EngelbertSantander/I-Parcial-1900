@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OperacionesComboBox = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ResultadoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +99,23 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // ResultadoLabel
+            // 
+            this.ResultadoLabel.AutoSize = true;
+            this.ResultadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultadoLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.ResultadoLabel.Location = new System.Drawing.Point(568, 247);
+            this.ResultadoLabel.Name = "ResultadoLabel";
+            this.ResultadoLabel.Size = new System.Drawing.Size(70, 25);
+            this.ResultadoLabel.TabIndex = 11;
+            this.ResultadoLabel.Text = "label3";
+            // 
             // Ejercicio2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultadoLabel);
             this.Controls.Add(this.OperacionesComboBox);
             this.Controls.Add(this.CalcularButton);
             this.Controls.Add(this.Num2TextBox);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox OperacionesComboBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label ResultadoLabel;
     }
 }

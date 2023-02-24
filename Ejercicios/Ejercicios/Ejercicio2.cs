@@ -32,6 +32,63 @@ namespace Ejercicios
                 return;
             }
             errorProvider1.Clear();
+
+            if(OperacionesComboBox.Text == String.Empty) 
+            {
+                errorProvider1.SetError(OperacionesComboBox, "Seleccione una operacion");
+                return;
+            }
+            errorProvider1.Clear();
+
+            decimal num1 = Convert.ToDecimal(Num1TextBox.Text);
+            decimal num2 = Convert.ToDecimal(Num2TextBox.Text);
+            ResultadoLabel.Text = Calcular(num1, num2).ToString();
+
         }
+
+        private decimal Calcular(decimal n1, decimal n2)
+        {
+            string operacion = OperacionesComboBox.Text;
+
+            decimal resultado = 0;
+
+            if (operacion == "Suma")
+            {
+                resultado = n1 + n2;
+            }
+            else if (operacion == "Resta")
+            {
+                resultado = n1 - n2;
+            }
+            else if (operacion == "Multiplicación")
+            {
+                resultado = n1 * n2;
+            }
+            else if (operacion == "División")
+            {
+                if (n2 == 0)
+                    resultado = 0;
+                else 
+                    resultado = n1 / n2;
+            }
+            return resultado;
+        }
+
+        //private decimal Calcular2(decimal n1, decimal n2) //En la nueva version de C# podemos quitar las llaves del codigo
+        //{
+        //    string operacion = OperacionesComboBox.Text;
+
+        //    decimal resultado = 0;
+
+        //    if (operacion == "Suma")
+        //        resultado = n1 + n2;
+        //    else if (operacion == "Resta")
+        //        resultado = n1 - n2;
+        //    else if (operacion == "Multiplicacion")
+        //        resultado = n1 * n2;
+        //    else if (operacion == "Division")
+        //        resultado = n1 / n2;
+        //    return resultado;
+        //}
     }
 }
