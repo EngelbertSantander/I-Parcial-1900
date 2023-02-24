@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CalcularButton = new System.Windows.Forms.Button();
             this.Num2TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Num1TextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OperacionesComboBox = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // CalcularButton
@@ -91,6 +94,10 @@
             this.OperacionesComboBox.Size = new System.Drawing.Size(237, 24);
             this.OperacionesComboBox.TabIndex = 10;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Ejercicio2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -104,6 +111,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Ejercicio2";
             this.Text = "Ejercicio2";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +125,6 @@
         private System.Windows.Forms.TextBox Num1TextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox OperacionesComboBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
